@@ -1,0 +1,46 @@
+{
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "type": "java",
+            "name": "Spring Boot-SpringcoreApplication<springcore>",
+            "request": "launch",
+            "cwd": "${workspaceFolder}",
+            "console": "internalConsole",
+            "mainClass": "springboot.springcore",
+            "projectName": "springcore",
+            "args": "",
+            "envFile": "${workspaceFolder}/.env"
+        },
+        {
+            "type": "java",
+            "name": "Spring Boot-SpringapiApplication<springapi>",
+            "request": "launch",
+            "cwd": "${workspaceFolder}",
+            "mainClass": "springboot.springapi",
+            "projectName": "springapi",
+            "args": "",
+            "envFile": "${workspaceFolder}/.env"
+        },
+        {
+            "type": "java",
+            "name": "Spring Boot-SpringapiApplication<springapi>",
+            "request": "launch",
+            "cwd": "${workspaceFolder}",
+            "mainClass": "springboot.springapi.SpringapiApplication",
+            "projectName": "springapi",
+            "args": "",
+            "envFile": "${workspaceFolder}/.env"
+        },
+        {
+            "type": "java",
+            "name": "Spring Boot-SpringcoreApplication<springcore>",
+            "request": "launch",
+            "cwd": "${workspaceFolder}",
+            "mainClass": "springboot.springcore.SpringcoreApplication",
+            "projectName": "springcore",
+            "args": "",
+            "envFile": "${workspaceFolder}/.env"
+        }
+    ]
+}
