@@ -11,6 +11,7 @@
 
     <modules>
         <module>springcore</module>
+        <module>springapi</module>
     </modules>
 
 </project>
