@@ -10,8 +10,8 @@ import springboot.springcore.entity.Product;
 @Mapper(componentModel = "spring")
 public interface ProductMapper {
 
-    List<ProductDTO> mapListProduct(Product product);
-    List<Product> mapListProductDTO(ProductDTO product);
+    List<ProductDTO> mapListProduct(List<Product> product);
+    List<Product> mapListProductDTO(List<ProductDTO> product);
 
     ProductDTO mapProduct(Product product);
     Product mapProductDTO(ProductDTO product);

@@ -4,16 +4,16 @@ import java.util.List;
 
 import org.mapstruct.Mapper;
 
-import springboot.springcore.dto.OrderItemDTO;
-import springboot.springcore.entity.OrderItem;
+import springboot.springcore.dto.ItemDTO;
+import springboot.springcore.entity.Item;
 
 @Mapper(componentModel = "spring")
 public interface OrderItemMapper {
 
-    List<OrderItemDTO> mapListOrderItem(OrderItem orderItem);
-    List<OrderItem> mapListOrderItemDTO(OrderItemDTO orderItem);
+    List<ItemDTO> mapListOrderItem(List<Item> orderItem);
+    List<Item> mapListOrderItemDTO(List<ItemDTO> orderItem);
 
-    OrderItemDTO mapOrderItem(OrderItem orderItem);
-    OrderItem mapOrderItemDTO(OrderItemDTO orderItem);
+    ItemDTO mapOrderItem(Item orderItem);
+    Item mapOrderItemDTO(ItemDTO orderItem);
     
 }

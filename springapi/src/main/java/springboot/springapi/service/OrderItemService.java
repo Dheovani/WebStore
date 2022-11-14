@@ -2,13 +2,13 @@ package springboot.springapi.service;
 
 import java.util.List;
 
-import springboot.springcore.dto.OrderItemDTO;
+import springboot.springcore.dto.ItemDTO;
 
 public interface OrderItemService {
 
-    List<OrderItemDTO> getAll();
-    OrderItemDTO save(OrderItemDTO orderItem);
-    OrderItemDTO findById(Long id);
-    OrderItemDTO delete(Long id);
+    List<ItemDTO> getAll();
+    ItemDTO save(ItemDTO orderItem);
+    ItemDTO findById(Long id);
+    ItemDTO delete(Long id);
     
 }

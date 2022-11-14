@@ -3,7 +3,7 @@ package springboot.springcore.dto;
 import lombok.Getter;
 import lombok.Setter;
 
-public class OrderItemDTO {
+public class ItemDTO {
     
     @Getter
     private Long id;
@@ -20,7 +20,7 @@ public class OrderItemDTO {
     @Getter @Setter
     private Double subtotal;
 
-    public OrderItemDTO() {
+    public ItemDTO() {
         this.setSubtotal(this.product.getPrice() * this.amount);
     }
 

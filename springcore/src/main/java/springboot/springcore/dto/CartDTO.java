@@ -5,7 +5,7 @@ import java.util.List;
 import jakarta.validation.constraints.NotNull;
 import lombok.Getter;
 import lombok.Setter;
-import springboot.springcore.entity.OrderItem;
+import springboot.springcore.entity.Item;
 
 public class CartDTO {
 
@@ -16,7 +16,7 @@ public class CartDTO {
     private Long orderId;
 
     @Getter @Setter
-    private List<OrderItem> items;
+    private List<Item> items;
 
     @NotNull
     @Getter @Setter

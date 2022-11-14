@@ -19,7 +19,7 @@ public class Cart {
     
     @ManyToOne(cascade = {CascadeType.MERGE, CascadeType.REFRESH})
     @Getter @Setter
-    private OrderItem item;
+    private Item item;
 
     @Getter @Setter
     private Integer session;
