@@ -4,63 +4,28 @@ import java.util.Date;
 
 import org.springframework.format.annotation.DateTimeFormat;
 
+import lombok.Getter;
+import lombok.Setter;
+
 public class OrderDTO {
 
+    @Getter
     private Long id;
 
     @DateTimeFormat(pattern = "yyyy-MM-dd")
+    @Getter @Setter
     private Date orderDate;
-    private Long clientId;
-    private ClientDTO client;
-    private OrderStatus orderStatus;
-    private Integer session;
 
-    public Long getId() {
-        return id;
-    }
+    @Getter @Setter
+    private Long clientId;
+
+    @Getter @Setter
+    private ClientDTO client;
     
-    public void setId(Long id) {
-        this.id = id;
-    }
+    @Getter @Setter
+    private OrderStatus orderStatus;
     
-    public Date getOrderDate() {
-        return orderDate;
-    }
-    
-    public void setOrderDate(Date orderDate) {
-        this.orderDate = orderDate;
-    }
-    
-    public Long getClientId() {
-        return clientId;
-    }
-    
-    public void setClientId(Long clientId) {
-        this.clientId = clientId;
-    }
-    
-    public ClientDTO getClient() {
-        return client;
-    }
-    
-    public void setClient(ClientDTO client) {
-        this.client = client;
-    }
-    
-    public OrderStatus getOrderStatus() {
-        return orderStatus;
-    }
-    
-    public void setOrderStatus(OrderStatus orderStatus) {
-        this.orderStatus = orderStatus;
-    }
-    
-    public Integer getSession() {
-        return session;
-    }
-    
-    public void setSession(Integer session) {
-        this.session = session;
-    }
+    @Getter @Setter
+    private Integer session;
     
 }

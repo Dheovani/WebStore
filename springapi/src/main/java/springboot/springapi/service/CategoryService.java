@@ -2,14 +2,14 @@ package springboot.springapi.service;
 
 import java.util.List;
 
-import springboot.springcore.entity.Category;
+import springboot.springcore.dto.CategoryDTO;
 
 public interface CategoryService {
 
-    List<Category> getAll();
-    Category save(Category category);
-    Category findById(Long id);
-    Category delete(Long id);
-    List<Category> getByCategory(String category);
+    List<CategoryDTO> getAll();
+    CategoryDTO save(CategoryDTO category);
+    CategoryDTO findById(Long id);
+    CategoryDTO delete(Long id);
+    List<CategoryDTO> getByCategory(String category);
     
 }

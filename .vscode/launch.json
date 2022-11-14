@@ -24,7 +24,7 @@
         },
         {
             "type": "java",
-            "name": "Spring Boot-SpringapiApplication<springapi>",
+            "name": "Spring Boot-SpringapiApplication<api>",
             "request": "launch",
             "cwd": "${workspaceFolder}",
             "mainClass": "springboot.springapi",

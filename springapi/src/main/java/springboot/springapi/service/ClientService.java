@@ -2,16 +2,16 @@ package springboot.springapi.service;
 
 import java.util.List;
 
-import springboot.springcore.entity.Address;
-import springboot.springcore.entity.Client;
+import springboot.springcore.dto.AddressDTO;
+import springboot.springcore.dto.ClientDTO;
 
 public interface ClientService {
 
-    List<Client> getAll();
-    Client save(Client client);
-    Client saveAddress(Long id, Address address);
-    Client findById(Long id);
-    Client delete(Long id);
-    List<Client> getByName(String name);
+    List<ClientDTO> getAll();
+    ClientDTO save(ClientDTO client);
+    ClientDTO saveAddress(Long id, AddressDTO address);
+    ClientDTO findById(Long id);
+    ClientDTO delete(Long id);
+    List<ClientDTO> getByName(String name);
     
 }

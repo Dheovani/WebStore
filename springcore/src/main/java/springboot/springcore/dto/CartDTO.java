@@ -3,47 +3,23 @@ package springboot.springcore.dto;
 import java.util.List;
 
 import jakarta.validation.constraints.NotNull;
+import lombok.Getter;
+import lombok.Setter;
 import springboot.springcore.entity.OrderItem;
 
 public class CartDTO {
 
+    @Getter
     private Long id;
+
+    @Getter @Setter
     private Long orderId;
+
+    @Getter @Setter
     private List<OrderItem> items;
 
     @NotNull
+    @Getter @Setter
     private Integer session;
-
-    public Long getId() {
-        return id;
-    }
-
-    public void setId(Long id) {
-        this.id = id;
-    }
-
-    public Long getOrderId() {
-        return orderId;
-    }
-
-    public void setOrderId(Long orderId) {
-        this.orderId = orderId;
-    }
-
-    public List<OrderItem> getItems() {
-        return items;
-    }
-
-    public void setItems(List<OrderItem> items) {
-        this.items = items;
-    }
-
-    public Integer getSession() {
-        return session;
-    }
-
-    public void setSession(Integer session) {
-        this.session = session;
-    }
     
 }

@@ -3,14 +3,18 @@ package springboot.springcore.dto;
 import jakarta.validation.constraints.NotBlank;
 import jakarta.validation.constraints.NotNull;
 import jakarta.validation.constraints.Pattern;
+import lombok.Getter;
+import lombok.Setter;
 import springboot.springcore.entity.Address;
 
 public class ClientDTO {
 
+    @Getter
     private Long id;
 
     @NotBlank(message = "Insert a valid name")
     @NotNull
+    @Getter @Setter
     private String name;
 
     @NotBlank(message = "Insert a valid email")
@@ -20,48 +24,13 @@ public class ClientDTO {
         flags = Pattern.Flag.CANON_EQ,
         message = "Invalid email."
     )
+    @Getter @Setter
     private String email;
+    
+    @Getter @Setter
     private Long addressId;
+
+    @Getter @Setter
     private Address address;
-
-    public Long getId() {
-        return id;
-    }
-
-    public void setId(Long id) {
-        this.id = id;
-    }
-
-    public String getName() {
-        return name;
-    }
-
-    public void setName(String name) {
-        this.name = name;
-    }
-
-    public String getEmail() {
-        return email;
-    }
-
-    public void setEmail(String email) {
-        this.email = email;
-    }
-
-    public Long getAddressId() {
-        return addressId;
-    }
-
-    public void setAddressId(Long addressId) {
-        this.addressId = addressId;
-    }
-
-    public Address getAddress() {
-        return address;
-    }
-
-    public void setAddress(Address address) {
-        this.address = address;
-    }
     
 }

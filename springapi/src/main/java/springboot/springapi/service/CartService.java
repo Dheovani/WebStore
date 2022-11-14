@@ -2,13 +2,13 @@ package springboot.springapi.service;
 
 import java.util.List;
 
-import springboot.springcore.entity.Cart;
+import springboot.springcore.dto.CartDTO;
 
 public interface CartService {
 
-    List<Cart> getAll();
-    Cart save(Cart cart);
-    Cart findById(Long id);
-    Cart delete(Long id);
+    List<CartDTO> getAll();
+    CartDTO save(CartDTO cart);
+    CartDTO findById(Long id);
+    CartDTO delete(Long id);
     
 }

@@ -11,6 +11,8 @@ import jakarta.persistence.Id;
 import jakarta.persistence.OneToOne;
 import jakarta.persistence.Temporal;
 import jakarta.persistence.TemporalType;
+import lombok.Getter;
+import lombok.Setter;
 import springboot.springcore.dto.OrderStatus;
 
 @Entity
@@ -18,9 +20,11 @@ public class Order {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @Getter
     private Long id;
 
     @Temporal(value = TemporalType.DATE)
+    @Getter @Setter
     private Date orderDate;
     
     @OneToOne(
@@ -28,44 +32,13 @@ public class Order {
         fetch = FetchType.LAZY,
         cascade = CascadeType.ALL
     )
+    @Getter @Setter
     private Client client;
+
+    @Getter @Setter
     private OrderStatus status;
+
+    @Getter @Setter
     private Integer session;
-
-    public Long getId() {
-        return id;
-    }
-
-    public Date getOrderDate() {
-        return orderDate;
-    }
-
-    public void setOrderDate(Date orderDate) {
-        this.orderDate = orderDate;
-    }
-
-    public Client getClient() {
-        return client;
-    }
-
-    public void setClient(Client client) {
-        this.client = client;
-    }
-
-    public OrderStatus getStatus() {
-        return status;
-    }
-
-    public void setStatus(OrderStatus status) {
-        this.status = status;
-    }
-
-    public Integer getSession() {
-        return session;
-    }
-
-    public void setSession(Integer session) {
-        this.session = session;
-    }
     
 }
