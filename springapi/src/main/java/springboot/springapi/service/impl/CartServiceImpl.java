@@ -17,8 +17,8 @@ import springboot.springcore.repository.CartRepository;
 public class CartServiceImpl implements CartService {
 
     @Autowired
-    CartRepository repository;
-    CartMapper mapper = Mappers.getMapper(CartMapper.class);
+    private CartRepository repository;
+    private CartMapper mapper = Mappers.getMapper(CartMapper.class);
 
     @Override
     public List<CartDTO> getAll() {

@@ -17,8 +17,8 @@ import springboot.springcore.repository.CategoryRepository;
 public class CategoryServiceImpl implements CategoryService {
 
     @Autowired
-    CategoryRepository repository;
-    CategoryMapper mapper = Mappers.getMapper(CategoryMapper.class);
+    private CategoryRepository repository;
+    private CategoryMapper mapper = Mappers.getMapper(CategoryMapper.class);
 
     @Override
     public List<CategoryDTO> getAll() {

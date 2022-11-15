@@ -17,8 +17,8 @@ import springboot.springcore.repository.ProductRepository;
 public class ProductServiceImpl implements ProductService {
 
     @Autowired
-    ProductRepository repository;
-    ProductMapper mapper = Mappers.getMapper(ProductMapper.class);
+    private ProductRepository repository;
+    private ProductMapper mapper = Mappers.getMapper(ProductMapper.class);
 
     @Override
     public List<ProductDTO> getAll() {

@@ -17,8 +17,8 @@ import springboot.springcore.repository.OrderItemRepository;
 public class OrderItemServiceImpl implements OrderItemService {
 
     @Autowired
-    OrderItemRepository repository;
-    OrderItemMapper mapper = Mappers.getMapper(OrderItemMapper.class);
+    private OrderItemRepository repository;
+    private OrderItemMapper mapper = Mappers.getMapper(OrderItemMapper.class);
 
     @Override
     public List<ItemDTO> getAll() {

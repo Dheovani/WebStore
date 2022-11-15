@@ -6,30 +6,24 @@ import jakarta.validation.constraints.Pattern;
 import lombok.Getter;
 import lombok.Setter;
 
-public class ClientDTO {
+public class UserDTO {
 
     @Getter
     private Long id;
 
-    @NotBlank(message = "Insert a valid name")
+    @NotBlank(message = "Insert a valid username")
     @NotNull
     @Getter @Setter
-    private String name;
+    private String userName;
 
-    @NotBlank(message = "Insert a valid email")
+    @NotBlank(message = "Insert a valid password")
     @NotNull
     @Pattern(
-        regexp = "^[\\w-\\.]+@([\\w-]+\\.)+[\\w-]{",
+        regexp = "{10,100}",
         flags = Pattern.Flag.CANON_EQ,
-        message = "Invalid email."
+        message = "Invalid password. \nMin of 10 characters \nMax of 100 characters."
     )
     @Getter @Setter
-    private String email;
-    
-    @Getter @Setter
-    private Long addressId;
-
-    @Getter @Setter
-    private AddressDTO address;
+    private String passWord;
     
 }
